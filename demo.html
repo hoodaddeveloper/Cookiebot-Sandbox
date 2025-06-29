@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cookiebot Demo – YouTube Integration</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+  <!-- Cookiebot Script -->
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="99470bf7-d602-404f-8d6f-af21a3fed90d"
+    data-blockingmode="auto" type="text/javascript"></script>
+
+  <style>
+    pre {
+      padding: 1rem;
+      overflow-x: auto;
+      border-radius: 0.5rem;
+      background-color: #f8f9fa;
+    }
+
+    iframe {
+      border: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Cookiebot Projekt</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container my-5">
+    <h1 class="text-center mb-4">Probearbeit – Cookiebot YouTube Beispiel</h1>
+
+    <p class="lead">Diese Seite demonstriert, wie ein YouTube-Video datenschutzkonform mit Hilfe von
+      <strong>Cookiebot</strong> eingebunden wird. Das Video wird erst geladen, wenn der Nutzer Marketing-Cookies
+      akzeptiert hat. Damit wird verhindert, dass YouTube vor der Zustimmung Cookies setzt oder Daten sammelt.</p>
+
+    <hr class="my-5">
+
+    <h2>1. Cookiebot-Script einbinden</h2>
+    <p>Das folgende Script wird im <code>&lt;head&gt;</code> der HTML-Datei eingebunden:</p>
+    <pre><code>&lt;script id="Cookiebot" src="https://consent.cookiebot.com/uc.js"
+  data-cbid="99470bf7-d602-404f-8d6f-af21a3fed90d"
+  data-blockingmode="auto" type="text/javascript"&gt;&lt;/script&gt;</code></pre>
+
+    <h2 class="mt-5">2. Video-Einbindung mit Zustimmungspflicht</h2>
+    <p>Der folgende HTML-Code zeigt, wie ein YouTube-Video erst nach Zustimmung zu Marketing-Cookies angezeigt wird:</p>
+    <pre><code>&lt;div class="ratio ratio-16x9"&gt;
+  &lt;div data-cookieconsent="marketing"&gt;
+    &lt;iframe src="https://www.youtube.com/embed/IxX_QHay02M" title="YouTube Video" allowfullscreen&gt;&lt;/iframe&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+    <h2 class="mt-5">3. Live-Demo (GitHub Pages)</h2>
+    <p>Die funktionierende Demo kann hier aufgerufen werden:</p>
+    <p><a href="https://hoodaddeveloper.github.io/Cookiebot-Sandbox/index.html" target="_blank">
+        https://hoodaddeveloper.github.io/Cookiebot-Sandbox/index.html
+      </a></p>
+
+    <p>Nach dem Laden der Seite erscheint ein Cookie-Banner. Erst nach Zustimmung zu <strong>Marketing-Cookies</strong>
+      wird das Video sichtbar.</p>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3 mt-auto">
+    <div class="container">
+      <small>Erstellt von Mohammad Khafas &bull; Probearbeit für Wollschläger GbR &bull; Juni 2025</small>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
