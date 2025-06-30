@@ -30,6 +30,24 @@
       </div>
     </div>
   </main>
+
+  <div class="cookie-layer youtube-placeholder text-center p-4 border rounded-3" style="background:#f8f9fa;">
+    <p>Mit dem Aufruf des Videos erklären Sie sich einverstanden, dass Ihre Daten an YouTube übermittelt werden.</p>
+    <p><a href="/datenschutz" target="_blank">Zur Datenschutzerklärung</a></p>
+    <button class="btn btn-primary mt-2" onclick="loadYouTube()">Ich akzeptiere</button>
+  </div>
+
+  <div id="youtube-frame" class="ratio ratio-16x9 mt-3 d-none">
+    <iframe src="https://www.youtube.com/embed/IxX_QHay02M" title="YouTube Video" allowfullscreen></iframe>
+  </div>
+
+  <script>
+    function loadYouTube() {
+      document.querySelector('.cookie-layer').style.display = 'none';
+      document.getElementById('youtube-frame').classList.remove('d-none');
+    }
+  </script>
+
   <!-- Zweite Seite Button -->
   <div class="container text-center mb-4">
     <a href="seite.2.html" class="btn btn-primary">Weiter zur Seite 2</a>
